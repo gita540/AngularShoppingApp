@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <script data-require="angularjs@1.6.2" data-semver="1.6.2" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+    <script data-require="jquery@*" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="shopping.css" />
+  </head>
+
+  <body ng-controller="myController">
+    
+    <div class="panel-group">
+  <div class="panel panel-primary">
+    <div class="panel-heading"> My Shopping List</div>
+    <div class="panel-body">
+    <ul>
+      <li ng-repeat="x in products">{{x}} <span ng-click="remove($index)" class="pull-right"> X</span></li>
+     
+    </ul>
+    <input ng-model="add" required>
+    <button ng-click="addItem()" class="btn btn-primary">Add</button>    
+    
+   </div>
+  </div>
+  </div>
+    
+    <script src="shopping.js"></script>
+  </body>
+
+</html>
